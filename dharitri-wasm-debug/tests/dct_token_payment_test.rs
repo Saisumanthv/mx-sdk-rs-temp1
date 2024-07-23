@@ -101,6 +101,7 @@ fn dct_token_payment_backwards_compatibility_decode_real_data() {
     let bytes = dharitri_wasm::hex_literal::hex!(
         "020000000f4153484d4f41462d3236356334350000000000000001000000065af3107a4000"
     );
+    println!("{:?}", bytes);
     let decoded = dct_token_payment_backwards_compatible_top_decode_or_handle_err(
         &bytes[..],
         DefaultErrorHandler,

@@ -60,7 +60,10 @@ where
 {
     // serialize
     let serialized_bytes = check_managed_top_encode(api.clone(), &element);
+    println!("first: {:?}", expected_bytes);
     assert_eq!(serialized_bytes.as_slice(), expected_bytes);
+    println!("second: {:?}", expected_bytes);
+
 
     // deserialize
     let deserialized: V = check_managed_top_decode::<V>(api, serialized_bytes.as_slice());
